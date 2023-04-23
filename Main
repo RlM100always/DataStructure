@@ -1,1 +1,25 @@
 
+package com.example.calculator;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class CalcApp extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(CalcApp.class.getResource("calc.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 339, 490);
+        stage.setTitle("             !! Calculator !!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+}
